@@ -34,11 +34,11 @@ app.get("/",function(req, res){
             const description = weatherData.weather[0].description
             const icon = weatherData.weather[0].icon
             const imageURL = `http://openweathermap.org/img/wn/${icon}@2x.png`
-            res.write("PLACE - "+ place + "\n")
-            res.write("TEMPERATURE - " + temp + "\n")
-            res.write("Weather Description - " + description)
-            res.write("\nIMAGE - \n")
-            res.write("<img src="+ imageURL+ ">")
+            res.write("<p>PLACE - "+ place + "</p>")
+            res.write("<p>TEMPERATURE - " + temp + "</p>")
+            res.write("<p>Weather Description - " + description + "</p>")
+            res.write("<p>IMAGE - </p>")
+            res.write(`<img src = ${imageURL} >`)
             res.send()
         })
     })
